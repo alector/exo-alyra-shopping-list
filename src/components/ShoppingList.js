@@ -3,7 +3,7 @@ import Product from './Product'
 import { useState } from 'react'
 
 const ShoppingList = (props) => {
-	const { shopList, removeFromShopList, addToShopList } = props
+	const { shopList, removeFromShopList } = props
 
 	const [filter, setFilter] = useState('')
 
