@@ -1,14 +1,15 @@
-import Product from "./Product";
-import { useState } from "react";
+import React from 'react'
+import Product from './Product'
+import { useState } from 'react'
 
 const ShoppingList = (props) => {
-	const { shopList, removeFromShopList, addToShopList } = props;
+	const { shopList, removeFromShopList, addToShopList } = props
 
-	const [filter, setFilter] = useState("");
+	const [filter, setFilter] = useState('')
 
 	const filteredList = shopList.filter((el) =>
 		el.trim().toLowerCase().startsWith(filter.trim().toLowerCase())
-	);
+	)
 	return (
 		<>
 			<h2 className="mb-3 h4">Produits à acheter ({shopList.length}):</h2>
@@ -36,11 +37,11 @@ const ShoppingList = (props) => {
 					</span>
 					<button
 						className="btn btn-light btn-sm"
-						onClick={() => setFilter("")}
+						onClick={() => setFilter('')}
 					>
 						<span role="img" aria-hidden>
 							🔄
-						</span>{" "}
+						</span>{' '}
 						Réinitialiser
 					</button>
 				</p>
@@ -54,11 +55,11 @@ const ShoppingList = (props) => {
 								removeFromShopList={removeFromShopList}
 							/>
 						</li>
-					);
+					)
 				})}
 			</ol>
 		</>
-	);
-};
+	)
+}
 
-export default ShoppingList;
+export default ShoppingList

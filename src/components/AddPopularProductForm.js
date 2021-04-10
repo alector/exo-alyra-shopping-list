@@ -1,23 +1,24 @@
+import React from 'react'
 const AddPopularProductForm = (props) => {
-  const { shopList, addToShopList } = props;
+  const { shopList, addToShopList } = props
 
   const handleFormSubmit = (event) => {
     // nous devons empêcher l'action par défaut de notre formulaire
-    event.preventDefault();
+    event.preventDefault()
     // récupérer la valeur depuis le champ input#product
-    const newProduct = event.target.elements.product.value;
+    const newProduct = event.target.elements.product.value
     // s'assurer que la liste contient des produits uniques
-    console.log("shopList:", shopList);
-    console.log("newProduct:", newProduct);
+    console.log('shopList:', shopList)
+    console.log('newProduct:', newProduct)
 
     if (shopList.includes(newProduct)) {
-      alert(`${newProduct} est déjà sur la liste`);
+      alert(`${newProduct} est déjà sur la liste`)
     } else {
-      addToShopList(newProduct);
+      addToShopList(newProduct)
     }
     // vider l'input (remettre le formulaire à zéro)
-    event.target.reset();
-  };
+    event.target.reset()
+  }
 
   return (
     <form className="mb-5" onSubmit={handleFormSubmit}>
@@ -33,7 +34,7 @@ const AddPopularProductForm = (props) => {
         </button>
       </div>
     </form>
-  );
-};
+  )
+}
 
-export default AddPopularProductForm;
+export default AddPopularProductForm

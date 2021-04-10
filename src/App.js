@@ -1,7 +1,8 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Header from "./components/Header";
-import ShoppingApp from "./components/ShoppingApp";
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import Header from './components/Header'
+import ShoppingApp from './components/ShoppingApp'
 
 function App() {
 	return (
@@ -9,7 +10,7 @@ function App() {
 			<Header />
 			<ShoppingApp />
 		</div>
-	);
+	)
 }
 
-export default App;
+export default App

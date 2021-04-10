@@ -1,17 +1,18 @@
-import { useState } from "react";
-import ShoppingList from "./ShoppingList";
-import AddPopularProduct from "./AddPopularProduct";
+import React from 'react'
+import { useState } from 'react'
+import ShoppingList from './ShoppingList'
+import AddPopularProduct from './AddPopularProduct'
 
 const ShoppingApp = () => {
-	const [shopList, setShopList] = useState([]);
+	const [shopList, setShopList] = useState([])
 
 	const addToShopList = (product) => {
-		setShopList([...shopList, product]);
-	};
+		setShopList([...shopList, product])
+	}
 
 	const removeFromShopList = (product) => {
-		setShopList(shopList.filter((el) => el !== product));
-	};
+		setShopList(shopList.filter((el) => el !== product))
+	}
 	return (
 		<main className="row">
 			<section className="col-lg-8">
@@ -28,7 +29,7 @@ const ShoppingApp = () => {
 				/>
 			</section>
 		</main>
-	);
-};
+	)
+}
 
-export default ShoppingApp;
+export default ShoppingApp

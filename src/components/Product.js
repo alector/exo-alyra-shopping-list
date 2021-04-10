@@ -1,9 +1,10 @@
+import React from 'react'
 const Product = (props) => {
-	const { product, removeFromShopList } = props;
+	const { product, removeFromShopList } = props
 
 	const handleButtonClick = () => {
-		removeFromShopList(product);
-	};
+		removeFromShopList(product)
+	}
 
 	return (
 		<div className="d-flex align-items-center justify-content-between">
@@ -14,11 +15,11 @@ const Product = (props) => {
 			>
 				<span role="img" aria-hidden>
 					✖️
-				</span>{" "}
+				</span>{' '}
 				ok
 			</button>
 		</div>
-	);
-};
+	)
+}
 
-export default Product;
+export default Product

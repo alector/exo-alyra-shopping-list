@@ -1,14 +1,15 @@
-import AddPopularProductForm from "./AddPopularProductForm";
+import React from 'react'
+import AddPopularProductForm from './AddPopularProductForm'
 
 const AddPopularProduct = (props) => {
-	const { shopList, addToShopList } = props;
+	const { shopList, addToShopList } = props
 	const populars = [
-		{ text: "pain", emoji: "🥖" },
-		{ text: "lait", emoji: "🥛" },
-		{ text: "pizza", emoji: "🍕" },
-		{ text: "salade", emoji: "🥬" },
-		{ text: "oranges", emoji: "🍊" },
-	];
+		{ text: 'pain', emoji: '🥖' },
+		{ text: 'lait', emoji: '🥛' },
+		{ text: 'pizza', emoji: '🍕' },
+		{ text: 'salade', emoji: '🥬' },
+		{ text: 'oranges', emoji: '🍊' },
+	]
 
 	return (
 		<section>
@@ -29,7 +30,7 @@ const AddPopularProduct = (props) => {
 							onClick={() => addToShopList(el.text)}
 							disabled={shopList.includes(el.text)}
 						>
-							{el.text}{" "}
+							{el.text}{' '}
 							<span className="fs-1" role="img" aria-hidden>
 								{el.emoji}
 							</span>
@@ -38,6 +39,6 @@ const AddPopularProduct = (props) => {
 				</div>
 			</div>
 		</section>
-	);
-};
-export default AddPopularProduct;
+	)
+}
+export default AddPopularProduct
